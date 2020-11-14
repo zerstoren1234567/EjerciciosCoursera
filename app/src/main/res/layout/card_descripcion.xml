@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivFoto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ancho_foto"
+            tools:srcCompat="@drawable/perro1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="@dimen/texto_size"
+                app:layout_constraintBottom_toBottomOf="@+id/ivHuesoBlanco"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRanking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="@dimen/texto_size"
+                app:layout_constraintBottom_toBottomOf="@+id/ivHuesoGold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivHuesoBlanco"
+                android:layout_width="@dimen/ancho_hueso"
+                android:layout_height="@dimen/ancho_hueso"
+                app:layout_constraintStart_toEndOf="@+id/tvNombre"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hueso" />
+
+            <ImageView
+                android:id="@+id/ivHuesoGold"
+                android:layout_width="@dimen/ancho_hueso"
+                android:layout_height="@dimen/ancho_hueso"
+                app:layout_constraintEnd_toStartOf="@+id/tvRanking"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hueso1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

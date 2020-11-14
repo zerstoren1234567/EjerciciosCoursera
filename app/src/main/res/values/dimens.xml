@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ancho_foto">300dp</dimen>
+    <dimen name="ancho_hueso">50dp</dimen>
+    <dimen name="texto_size">24sp</dimen>
+</resources>
