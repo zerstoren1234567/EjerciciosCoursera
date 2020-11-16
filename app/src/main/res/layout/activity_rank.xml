@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RankActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -33,15 +33,15 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/btEstrella"
+                android:id="@+id/button"
                 android:layout_width="@dimen/ancho_hueso"
                 android:layout_height="@dimen/ancho_hueso"
                 android:background="@android:drawable/btn_star_big_on"
-                android:backgroundTint="#FFFFFF"
-                android:text="5"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>

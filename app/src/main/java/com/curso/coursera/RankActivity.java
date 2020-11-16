@@ -4,24 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class RankActivity extends AppCompatActivity {
 
     ArrayList<Perro> perros;
     private RecyclerView listaPerros;
 
-    private Button btnEstrella;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rank);
 
         listaPerros = findViewById(R.id.rvRecycler);
 
@@ -40,15 +35,5 @@ public class MainActivity extends AppCompatActivity {
 
         PerroAdaptador perroAdaptador = new PerroAdaptador(perros);
         listaPerros.setAdapter(perroAdaptador);
-
-
-        btnEstrella = findViewById(R.id.btEstrella);
-        btnEstrella.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, RankActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }

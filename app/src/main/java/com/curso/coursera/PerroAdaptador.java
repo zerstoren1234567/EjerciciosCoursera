@@ -39,7 +39,8 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
         return perros.size();
     }
 
-    public static class PerroViewHolder extends RecyclerView.ViewHolder{
+    //public static class PerroViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public static class PerroViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView ivFoto;
         private TextView tvNombre;
@@ -50,6 +51,16 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
             ivFoto = itemView.findViewById(R.id.ivFoto);
             tvNombre = itemView.findViewById(R.id.tvNombre);
             tvRank = itemView.findViewById(R.id.tvRanking);
+
+            //itemView.setOnClickListener(this);
         }
+
+        /*
+        @Override
+        public void onClick(View view) {
+            int ranking = Integer.parseInt(tvRank.getText().toString());
+
+            tvRank.setText(tvRank.getText()+ "cerdonio");
+        }*/
     }
 }
