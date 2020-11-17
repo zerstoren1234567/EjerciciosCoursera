@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Coursera">
-        <activity android:name=".RankActivity"></activity>
+        <activity android:name=".ContactoActivity"></activity>
+        <activity android:name=".AboutActivity" />
+        <activity
+            android:name=".MainEjercicio3Activity"
+            android:label="@string/title_activity_main_ejercicio3"
+            android:theme="@style/Theme.Coursera.NoActionBar" />
+        <activity android:name=".Ejercicio2Activity" />
+        <activity android:name=".RankActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
