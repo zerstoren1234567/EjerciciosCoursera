@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.curso.coursera.adaptador.PerroAdaptador;
+import com.curso.coursera.model.Perro;
+
 import java.util.ArrayList;
 
 public class Ejercicio2Activity extends AppCompatActivity {

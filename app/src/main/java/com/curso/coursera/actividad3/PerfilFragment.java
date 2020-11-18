@@ -11,8 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.curso.coursera.Perro;
-import com.curso.coursera.PerroAdaptador;
+import com.curso.coursera.model.Perro;
+import com.curso.coursera.adaptador.PerroAdaptador;
 import com.curso.coursera.R;
 
 import java.util.ArrayList;

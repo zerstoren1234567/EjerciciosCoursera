@@ -10,16 +10,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.curso.coursera.Perro;
-import com.curso.coursera.PerroAdaptador;
+import com.curso.coursera.model.Perro;
+import com.curso.coursera.adaptador.PerroAdaptador;
 import com.curso.coursera.R;
+import com.curso.coursera.presentador.IRecyclerFragmentPresenter;
+import com.curso.coursera.presentador.RecyclerFragmentPresenter;
 
 import java.util.ArrayList;
 
-public class RecyclerFragment extends Fragment {
+public class RecyclerFragment extends Fragment implements IRecyclerFragmentView{
 
-    ArrayList<Perro> perros;
+    private ArrayList<Perro> perros;
     private RecyclerView listaPerros;
+    private IRecyclerFragmentPresenter presenter;
 
     /*public RecyclerFragment() {
         // Required empty public constructor
@@ -31,24 +34,41 @@ public class RecyclerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_recycler, container, false);
         listaPerros = view.findViewById(R.id.rvRecycler);
 
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
 
-        listaPerros.setLayoutManager(llm);
 
-        perros = new ArrayList<Perro>();
+        /*perros = new ArrayList<Perro>();
         perros.add(new Perro(R.drawable.perro1, "Chandoso", "0"));
         perros.add(new Perro(R.drawable.perro2, "Pulgoso", "0"));
         perros.add(new Perro(R.drawable.perro3, "Sarnoso", "0"));
         perros.add(new Perro(R.drawable.perro1, "Mugroso", "0"));
-        perros.add(new Perro(R.drawable.perro2, "Garrapatozo", "0"));
+        perros.add(new Perro(R.drawable.perro2, "Garrapatozo", "0"));*/
 
 
-        PerroAdaptador perroAdaptador = new PerroAdaptador(perros);
-        listaPerros.setAdapter(perroAdaptador);
+
+        //listaPerros.setAdapter(perroAdaptador);
+
+        presenter = new RecyclerFragmentPresenter(this, getContext());
         // Inflate the layout for this fragment
         return view;
 
 
+    }
+
+    @Override
+    public void generarLinearLayoutVertical() {
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        listaPerros.setLayoutManager(llm);
+    }
+
+    @Override
+    public PerroAdaptador crearAdaptador(ArrayList<Perro> perros) {
+        PerroAdaptador perroAdaptador = new PerroAdaptador(perros);
+        return perroAdaptador;
+    }
+
+    @Override
+    public void inicializarAdaptador(PerroAdaptador perroAdaptador) {
+        listaPerros.setAdapter(perroAdaptador);
     }
 }

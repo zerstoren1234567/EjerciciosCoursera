@@ -1,4 +1,4 @@
-package com.curso.coursera;
+package com.curso.coursera.adaptador;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.curso.coursera.R;
+import com.curso.coursera.model.Perro;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;

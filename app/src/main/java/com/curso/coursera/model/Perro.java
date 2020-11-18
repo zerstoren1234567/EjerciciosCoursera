@@ -1,4 +1,4 @@
-package com.curso.coursera;
+package com.curso.coursera.model;
 
 public class Perro {
     private int id;
