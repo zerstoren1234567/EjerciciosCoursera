@@ -1,6 +1,7 @@
 package com.curso.coursera;
 
 public class Perro {
+    private int id;
     private int foto;
     private String nombre;
     private String rank;
@@ -33,5 +34,13 @@ public class Perro {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

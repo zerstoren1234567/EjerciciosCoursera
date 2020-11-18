@@ -16,6 +16,9 @@
             android:id="@+id/ivFoto"
             android:layout_width="match_parent"
             android:layout_height="@dimen/ancho_foto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@drawable/perro1" />
 
         <TextView
