@@ -41,7 +41,7 @@ public class Ejercicio2Activity extends AppCompatActivity {
         perros.add(new Perro(R.drawable.perro2, "Garrapatozo", "0"));
 
 
-        PerroAdaptador perroAdaptador = new PerroAdaptador(perros);
+        PerroAdaptador perroAdaptador = new PerroAdaptador(perros, this);
         listaPerros.setAdapter(perroAdaptador);
 
 

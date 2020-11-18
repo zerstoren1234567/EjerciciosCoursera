@@ -63,7 +63,7 @@ public class RecyclerFragment extends Fragment implements IRecyclerFragmentView{
 
     @Override
     public PerroAdaptador crearAdaptador(ArrayList<Perro> perros) {
-        PerroAdaptador perroAdaptador = new PerroAdaptador(perros);
+        PerroAdaptador perroAdaptador = new PerroAdaptador(perros, this.getActivity());
         return perroAdaptador;
     }
 

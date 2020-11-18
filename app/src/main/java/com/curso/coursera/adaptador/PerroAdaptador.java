@@ -1,5 +1,7 @@
 package com.curso.coursera.adaptador;
 
+import android.app.Activity;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.curso.coursera.R;
+import com.curso.coursera.db.ConstructorPerros;
 import com.curso.coursera.model.Perro;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -18,9 +21,12 @@ import java.util.ArrayList;
 public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroViewHolder>{
 
     ArrayList<Perro> perros;
+    Activity activity;
+    int flag = 1;
 
-    public PerroAdaptador(ArrayList<Perro> perros) {
+    public PerroAdaptador(ArrayList<Perro> perros, Activity activity) {
         this.perros = perros;
+        this.activity = activity;
     }
 
     @NonNull
@@ -40,8 +46,20 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
         holder.ivHuesoHuesoBlanco.setOnClickListener(view -> {
             int ranking = Integer.parseInt(holder.tvRank.getText().toString()) + 1;
             holder.tvRank.setText(String.valueOf(ranking));
-            Snackbar.make(view, "Has rankeado correctamente ", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
+
+
+            if (flag <= 5){
+                ConstructorPerros constructorPerros = new ConstructorPerros(activity);
+                constructorPerros.insertarPerro(perro);
+
+                Snackbar.make(view, "Se ha guardado en la posición: " + flag, Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                flag++;
+                if (flag > 5){
+                    flag = 1;
+                }
+            }
+
         });
     }
 

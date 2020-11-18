@@ -12,6 +12,9 @@ public class Perro {
         this.foto = foto;
     }
 
+    public Perro() {
+    }
+
     public String getRank() {
         return rank;
     }

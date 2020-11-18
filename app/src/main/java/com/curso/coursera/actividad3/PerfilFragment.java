@@ -48,7 +48,7 @@ public class PerfilFragment extends Fragment {
         perros.add(new Perro(R.drawable.perro3, "", "5"));
 
 
-        PerroAdaptador perroAdaptador = new PerroAdaptador(perros);
+        PerroAdaptador perroAdaptador = new PerroAdaptador(perros, this.getActivity());
         listaPerros.setAdapter(perroAdaptador);
         return view;
     }
