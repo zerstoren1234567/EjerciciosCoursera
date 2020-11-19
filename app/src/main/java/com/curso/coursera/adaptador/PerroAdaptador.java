@@ -53,7 +53,6 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
             int ranking = Integer.parseInt(holder.tvRank.getText().toString()) + 1;
             holder.tvRank.setText(String.valueOf(ranking));
 
-
             if (flag <= 5){
                 ConstructorPerros constructorPerros = new ConstructorPerros(activity);
                 constructorPerros.insertarPerro(perro);
