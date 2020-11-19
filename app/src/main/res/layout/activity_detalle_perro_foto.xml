@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationY="10dp"
+        android:translationZ="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivFotoDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/perro1" />
+
+            <TextView
+                android:id="@+id/tvRankDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="@dimen/texto_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivHuesoBlanco"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoDetalle" />
+
+            <ImageView
+                android:id="@+id/ivHuesoBlanco"
+                android:layout_width="@dimen/ancho_hueso"
+                android:layout_height="@dimen/ancho_hueso"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoDetalle"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/hueso"
+                tools:layout_editor_absoluteX="180dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
+

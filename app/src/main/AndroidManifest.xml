@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Coursera">
-        <activity android:name=".ContactoActivity"></activity>
+        <activity android:name=".DetallePerroActivity"></activity>
+        <activity android:name=".ContactoActivity" />
         <activity android:name=".AboutActivity" />
         <activity
             android:name=".MainEjercicio3Activity"

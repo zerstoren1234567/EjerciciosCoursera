@@ -1,7 +1,7 @@
 package com.curso.coursera.adaptador;
 
 import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,10 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.curso.coursera.DetallePerroActivity;
 import com.curso.coursera.R;
-import com.curso.coursera.db.ConstructorPerros;
 import com.curso.coursera.model.Perro;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -32,18 +31,25 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
     @NonNull
     @Override
     public PerroViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_descripcion, parent, false);
+        //View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_descripcion, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_grid_descripcion, parent, false);
         return new PerroViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PerroViewHolder holder, int position) {
-        Perro perro = perros.get(position);
+        final Perro perro = perros.get(position);
         holder.ivFoto.setImageResource(perro.getFoto());
-        holder.tvNombre.setText(perro.getNombre());
+        //holder.tvNombre.setText(perro.getNombre());
         holder.tvRank.setText(perro.getRank());
 
-        holder.ivHuesoHuesoBlanco.setOnClickListener(view -> {
+        holder.ivFoto.setOnClickListener(view -> {
+            Intent intent = new Intent(activity, DetallePerroActivity.class);
+            intent.putExtra("url", perro.getNombre());
+            intent.putExtra("rank", perro.getRank());
+            activity.startActivity(intent);
+        });
+        /*holder.ivHuesoHuesoBlanco.setOnClickListener(view -> {
             int ranking = Integer.parseInt(holder.tvRank.getText().toString()) + 1;
             holder.tvRank.setText(String.valueOf(ranking));
 
@@ -60,7 +66,7 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
                 }
             }
 
-        });
+        });*/
     }
 
     @Override
@@ -72,16 +78,16 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
     public static class PerroViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView ivFoto;
-        private TextView tvNombre;
+        //private TextView tvNombre;
         private TextView tvRank;
 
         private ImageView ivHuesoHuesoBlanco;
 
         public PerroViewHolder(@NonNull View itemView) {
             super(itemView);
-            ivFoto = itemView.findViewById(R.id.ivFoto);
-            tvNombre = itemView.findViewById(R.id.tvNombre);
-            tvRank = itemView.findViewById(R.id.tvRanking);
+            ivFoto = itemView.findViewById(R.id.ivFotoDetalle);
+            //tvNombre = itemView.findViewById(R.id.tvNombre);
+            tvRank = itemView.findViewById(R.id.tvRankDetalle);
             ivHuesoHuesoBlanco = itemView.findViewById(R.id.ivHuesoBlanco);
 
             //onclick
