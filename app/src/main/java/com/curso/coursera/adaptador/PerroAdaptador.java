@@ -39,13 +39,13 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
     @Override
     public void onBindViewHolder(@NonNull PerroViewHolder holder, int position) {
         final Perro perro = perros.get(position);
-        holder.ivFoto.setImageResource(perro.getFoto());
+        //holder.ivFoto.setImageResource(perro.getUrlFoto());
         //holder.tvNombre.setText(perro.getNombre());
         holder.tvRank.setText(perro.getRank());
 
         holder.ivFoto.setOnClickListener(view -> {
             Intent intent = new Intent(activity, DetallePerroActivity.class);
-            intent.putExtra("url", perro.getNombre());
+            intent.putExtra("url", perro.getUrlFoto());
             intent.putExtra("rank", perro.getRank());
             activity.startActivity(intent);
         });

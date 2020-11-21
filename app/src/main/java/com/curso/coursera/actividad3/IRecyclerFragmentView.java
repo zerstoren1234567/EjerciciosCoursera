@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public interface IRecyclerFragmentView {
     public void generarLinearLayoutVertical();
+    public void generarGridLayout();
     public PerroAdaptador crearAdaptador(ArrayList<Perro> perros);
     public void inicializarAdaptador(PerroAdaptador perroAdaptador);
 }

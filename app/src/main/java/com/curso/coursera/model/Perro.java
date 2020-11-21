@@ -2,33 +2,33 @@ package com.curso.coursera.model;
 
 public class Perro {
     private int id;
-    private int foto;
+    private String urlFoto;
     private String nombre;
-    private String rank;
+    private String rank = "0";
 
-    public Perro(int foto, String nombre, String rank) {
+    public Perro(String urlFoto, String nombre, String rank) {
         this.nombre = nombre;
         this.rank = rank;
-        this.foto = foto;
+        this.urlFoto = urlFoto;
     }
 
     public Perro() {
     }
 
-    public String getRank() {
-        return rank;
+    public int getId() {
+        return id;
     }
 
-    public void setRank(String rank) {
-        this.rank = rank;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getFoto() {
-        return foto;
+    public String getUrlFoto() {
+        return urlFoto;
     }
 
-    public void setFoto(int foto) {
-        this.foto = foto;
+    public void setUrlFoto(String urlFoto) {
+        this.urlFoto = urlFoto;
     }
 
     public String getNombre() {
@@ -39,11 +39,11 @@ public class Perro {
         this.nombre = nombre;
     }
 
-    public int getId() {
-        return id;
+    public String getRank() {
+        return rank;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setRank(String rank) {
+        this.rank = rank;
     }
 }

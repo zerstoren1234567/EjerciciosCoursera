@@ -3,6 +3,7 @@ package com.curso.coursera.actividad3;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -59,6 +60,12 @@ public class RecyclerFragment extends Fragment implements IRecyclerFragmentView{
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         listaPerros.setLayoutManager(llm);
+    }
+
+    @Override
+    public void generarGridLayout() {
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
+        listaPerros.setLayoutManager(gridLayoutManager);
     }
 
     @Override
