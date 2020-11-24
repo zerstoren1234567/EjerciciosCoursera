@@ -58,13 +58,13 @@ public class BaseDatos extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery(query, null);
         while (cursor.moveToNext()){
-            Perro perro = new Perro();
+            /*Perro perro = new Perro();
             perro.setId(cursor.getInt(0));
             perro.setNombre(cursor.getString(1));
             perro.setRank(cursor.getString(2));
             perro.setFoto(cursor.getInt(3));
 
-            perros.add(perro);
+            perros.add(perro);*/
         }
         sqLiteDatabase.close();
         return perros;

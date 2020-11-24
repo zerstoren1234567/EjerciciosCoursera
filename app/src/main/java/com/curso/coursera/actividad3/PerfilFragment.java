@@ -40,12 +40,12 @@ public class PerfilFragment extends Fragment {
         listaPerros.setLayoutManager(new GridLayoutManager(getContext(), 3));
 
         perros = new ArrayList<Perro>();
-        perros.add(new Perro(R.drawable.perro1, "", "0"));
-        perros.add(new Perro(R.drawable.perro2, "", "1"));
-        perros.add(new Perro(R.drawable.perro3, "", "2"));
-        perros.add(new Perro(R.drawable.perro1, "", "3"));
-        perros.add(new Perro(R.drawable.perro2, "", "4"));
-        perros.add(new Perro(R.drawable.perro3, "", "5"));
+        perros.add(new Perro(String.valueOf(R.drawable.perro1), "", "0"));
+        perros.add(new Perro(String.valueOf(R.drawable.perro2), "", "1"));
+        perros.add(new Perro(String.valueOf(R.drawable.perro3), "", "2"));
+        perros.add(new Perro(String.valueOf(R.drawable.perro1), "", "3"));
+        perros.add(new Perro(String.valueOf(R.drawable.perro2), "", "4"));
+        perros.add(new Perro(String.valueOf(R.drawable.perro3), "", "5"));
 
 
         PerroAdaptador perroAdaptador = new PerroAdaptador(perros, this.getActivity());

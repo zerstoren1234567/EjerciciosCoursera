@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.curso.coursera.DetallePerroActivity;
 import com.curso.coursera.R;
 import com.curso.coursera.model.Perro;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -39,6 +40,10 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
     @Override
     public void onBindViewHolder(@NonNull PerroViewHolder holder, int position) {
         final Perro perro = perros.get(position);
+        Picasso.with(activity)
+                .load(perro.getUrlFoto())
+                .placeholder(R.drawable.perro1)
+                .into(holder.ivFoto);
         //holder.ivFoto.setImageResource(perro.getUrlFoto());
         //holder.tvNombre.setText(perro.getNombre());
         holder.tvRank.setText(perro.getRank());

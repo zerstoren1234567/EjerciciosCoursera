@@ -10,6 +10,7 @@ import com.curso.coursera.model.Perro;
 import com.curso.coursera.restApi.EndPointsApi;
 import com.curso.coursera.restApi.adapter.RestApiAdapter;
 import com.curso.coursera.restApi.model.PerroResponse;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -40,7 +41,8 @@ public class RecyclerFragmentPresenter implements IRecyclerFragmentPresenter {
     @Override
     public void obtenerMediosRecientes() {
         RestApiAdapter restApiAdapter = new RestApiAdapter();
-        EndPointsApi endPointsApi = restApiAdapter.establecerConexionRestApiInstagram();
+        Gson gsonMediaRecent = restApiAdapter.construyendoGsonDeserializadorMediaRecent();
+        EndPointsApi endPointsApi = restApiAdapter.establecerConexionRestApiInstagram(gsonMediaRecent);
         Call<PerroResponse> call = endPointsApi.getRecentMedia();
         call.enqueue(new Callback<PerroResponse>() {
             @Override
