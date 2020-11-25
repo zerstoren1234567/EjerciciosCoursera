@@ -34,11 +34,11 @@ public class Ejercicio2Activity extends AppCompatActivity {
         listaPerros.setLayoutManager(llm);
 
         perros = new ArrayList<Perro>();
-        perros.add(new Perro(R.drawable.perro1, "Chandoso", "0"));
-        perros.add(new Perro(R.drawable.perro2, "Pulgoso", "0"));
-        perros.add(new Perro(R.drawable.perro3, "Sarnoso", "0"));
-        perros.add(new Perro(R.drawable.perro1, "Mugroso", "0"));
-        perros.add(new Perro(R.drawable.perro2, "Garrapatozo", "0"));
+        perros.add(new Perro(String.valueOf(R.drawable.perro1), "Chandoso", "0"));
+        perros.add(new Perro(String.valueOf(R.drawable.perro2), "Pulgoso", "0"));
+        perros.add(new Perro(String.valueOf(R.drawable.perro3), "Sarnoso", "0"));
+        perros.add(new Perro(String.valueOf(R.drawable.perro1), "Mugroso", "0"));
+        perros.add(new Perro(String.valueOf(R.drawable.perro2), "Garrapatozo", "0"));
 
 
         PerroAdaptador perroAdaptador = new PerroAdaptador(perros, this);
