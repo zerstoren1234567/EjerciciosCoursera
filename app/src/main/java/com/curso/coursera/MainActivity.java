@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnEjercicio2;
     private Button btnEjercicio3;
+    private Button btnEjercicioNotificacion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, MainEjercicio3Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnEjercicioNotificacion = findViewById(R.id.btNotificacion);
+        btnEjercicioNotificacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, NotificacionActivity.class);
                 startActivity(intent);
             }
         });

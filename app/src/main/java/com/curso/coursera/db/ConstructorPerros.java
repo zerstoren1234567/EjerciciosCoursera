@@ -71,7 +71,7 @@ public class ConstructorPerros {
         contentValues.put(ConstantesBaseDatos.TABLE_CINCO_PERROS_ID, perro.getId());
         contentValues.put(ConstantesBaseDatos.TABLE_CINCO_PERROS_NOMBRE, perro.getNombre());
         contentValues.put(ConstantesBaseDatos.TABLE_CINCO_PERROS_RANKING, perro.getRank());
-        contentValues.put(ConstantesBaseDatos.TABLE_CINCO_PERROS_FOTO, perro.getFoto());
+        contentValues.put(ConstantesBaseDatos.TABLE_CINCO_PERROS_FOTO, perro.getUrlFoto());
         baseDatos.insertarRank(contentValues);
 
     }

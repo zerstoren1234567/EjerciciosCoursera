@@ -98,6 +98,10 @@ public class MainEjercicio3Activity extends AppCompatActivity {
                 intent = new Intent(this, ConfigurarCuentaActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.mNotificaciones:
+                intent = new Intent(this, NotificacionActivity.class);
+                startActivity(intent);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

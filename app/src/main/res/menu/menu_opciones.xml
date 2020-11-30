@@ -22,4 +22,9 @@
         android:title="@string/menu_conf_cuenta"
         android:orderInCategory="102">
     </item>
+    <item
+        android:id="@+id/mNotificaciones"
+        android:title="@string/menu_notificaciones"
+        android:orderInCategory="102">
+    </item>
 </menu>
