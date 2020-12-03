@@ -12,6 +12,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RestApiAdapter {
 
+    public EndPointsApi establecerConexionRestApi(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(ConstantesRestApi.ROOT_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        return retrofit.create(EndPointsApi.class);
+    }
+
     public EndPointsApi establecerConexionRestApiInstagram(Gson gson){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(ConstantesRestApi.ROOT_URL)
