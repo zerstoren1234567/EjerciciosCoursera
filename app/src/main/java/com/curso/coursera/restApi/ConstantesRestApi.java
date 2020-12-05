@@ -4,6 +4,7 @@ public final class ConstantesRestApi {
 
     public static final String ROOT_URL = "https://safe-anchorage-46346.herokuapp.com/";
     public static final String KEY_POST_ID_TOKEN = "token-device";
+    public static final String KEY_TOQUE_ANIMAL = "toque-animal/{id}/{animal}/";
 
 /*    public static final String VERSION = "/v1/";
     public static final String ROOT_URL = "https://api.instagram.com" + VERSION;

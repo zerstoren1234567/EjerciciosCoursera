@@ -7,6 +7,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface EndPointsApi {
 
@@ -16,5 +17,8 @@ public interface EndPointsApi {
     @FormUrlEncoded
     @POST(ConstantesRestApi.KEY_POST_ID_TOKEN)
     Call<PerroResponse> registrarTokenId(@Field("token") String token);
+
+    @GET(ConstantesRestApi.KEY_TOQUE_ANIMAL)
+    Call<PerroResponse> toqueAnimal(@Path("id") String id, @Path("animal") String animal);
 
 }

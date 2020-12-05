@@ -20,4 +20,5 @@
     <string name="menu_notificaciones">Recibir Notificaciones</string>
     <string name="notificacion">lanzar notificacion</string>
     <string name="btNotificacion">notificacion</string>
+    <string name="texto_accion_toque">Devuelve el toque</string>
 </resources>

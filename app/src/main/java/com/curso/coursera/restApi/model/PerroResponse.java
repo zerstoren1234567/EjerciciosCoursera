@@ -10,6 +10,7 @@ public class PerroResponse {
 
     private String id;
     private String token;
+    private String animal;
 
     public PerroResponse() {
     }
@@ -17,6 +18,20 @@ public class PerroResponse {
     public PerroResponse(String id, String token) {
         this.id = id;
         this.token = token;
+    }
+
+    public PerroResponse(String id, String token, String animal) {
+        this.id = id;
+        this.token = token;
+        this.animal = animal;
+    }
+
+    public String getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(String animal) {
+        this.animal = animal;
     }
 
     public String getId() {
